@@ -50,6 +50,111 @@
        .icon{
         height: 30px;
        }
+       .heading{
+    display: block;
+    text-align: center;  
+    
+}
+        .container{
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            
+                  }
+        .shoes{
+            width: 330px;
+            height: 450px;
+            border: 3px solid black;
+            border-radius: 20px;
+            margin:30px auto;
+        }
+        .img{
+            height: 200px;
+            width: 100%;
+            object-fit: contain;
+           display: block;
+            margin: 0px auto;
+            border-radius:20px 20px 0px 0px ;
+        }
+        .desc{
+            text-align:justify;
+            padding: 10px;
+        }
+        .btn{
+            display: block;
+            margin: 0px auto;
+            font-size: 30px;
+            border-radius: 30px;
+            background-color:#4db8ff;
+            color: white;
+            border:solid 2px #004d80;
+            padding: 10px 15px;
+
+        }
+        .btn:hover{
+            background-color: blue;
+        }
+         /* Mobile */
+        @media (max-width:600px)  {
+            .heading{
+           font-size: 20px;  
+            }
+           .btn {
+               font-size: 20px;
+            }
+            .shoes {
+                margin: 10px auto;
+                height: 400px;
+            }
+           .icon{
+            display: block;
+            margin-left: auto;
+           }
+             
+            .ser{
+                display: none;
+            }
+             .page{
+                display: none;
+             }
+            }
+        
+        /* Tablet */
+        @media (min-width:769px) and (max-width:992px) {
+            .heading{
+           font-size: 24px;  
+            }
+           .btn {
+               font-size: 24px;
+            }
+            .shoes {
+                margin: 20px auto;
+                height: 410px;
+                width: 300px;
+            }
+            .menus{
+        margin-left: 400px;
+       }
+            .ser{
+                display: none;
+            }
+          
+        }
+         /* Laptop */
+         @media (min-width:993px) and (max-width:1200px) {
+            .heading{
+           font-size: 24px;  
+            }
+           .btn {
+               font-size: 24px;
+            }
+            .shoes {
+                margin: 27px auto;
+                height: 430px;
+            }
+    
+        }
+
     </style>
 </head>
 <body>
