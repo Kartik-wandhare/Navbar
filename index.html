@@ -1,218 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <style>
-        .navbar{
-            background-color: chartreuse;
-            font-size: 30px;
-            padding: 0;
-            margin: 0;
-            position: sticky;
-            width: 100%;
-            top: 0px;
-            display: flex;
-            align-items: center;
-            height: 45px;
-
-       } 
-        .shop{
-            display: flex;
-            position: fixed;
-        }
-        .logo{
-        height: 35px;
-        margin-right: 5px;
-        
-        }
-       .menus{
-        margin-left: 800px;
-       }
-       .page{
-        margin: 0px 10px;
-        text-decoration: none;
-        color: black;
-       }
-       .page:hover{
-        text-decoration:underline;
-       }
-       .search{
-        margin-left: 130px;
-       }
-       .ser{
-        border-radius: 30px;
-        height: 29px;
-        border:darkgreen 1px solid;
-        
-       }
-       .icon{
-        height: 30px;
-        
-       }
-        .heading{
-    display: block;
-    text-align: center;  
-    
+       .navbar {
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
+    height: 45px;
+    z-index: 1000;
 }
-        .container{
-            display:flex;
-            flex-direction:row;
-            flex-wrap: wrap;
-            
-                  }
-        .shoes{
-            width: 330px;
-            height: 450px;
-            border: 3px solid black;
-            border-radius: 20px;
-            margin:30px auto;
-        }
-        .img{
-            height: 200px;
-            width: 100%;
-            object-fit: contain;
-           display: block;
-            margin: 0px auto;
-            border-radius:20px 20px 0px 0px ;
-        }
-        .desc{
-            text-align:justify;
-            padding: 10px;
-        }
-        .btn{
-            display: block;
-            margin: 0px auto;
-            font-size: 30px;
-            border-radius: 30px;
-            background-color:#4db8ff;
-            color: white;
-            border:solid 2px #004d80;
-            padding: 10px 15px;
 
-        }
-        .btn:hover{
-            background-color: blue;
-        }
-         /* Mobile */
-        @media (max-width:600px)  {
-            .heading{
-           font-size: 20px;  
-            }
-           .btn {
-               font-size: 20px;
-            }
-            .shoes {
-                margin: 10px auto;
-                height: 400px;
-            }
-           .icon{
-            display: block;
-            margin-left: auto;
-           }
-             
-            .ser{
-                display: none;
-            }
-             .page{
-                display: none;
-             }
-            }
-        
+.shop {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.menus {
+    display: flex;
+    margin: 0px 480px;
+    gap: 15px;
+    margin-left: 800px;
+}
+
+.page {
+   margin-left:0px 10px;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: black;
+    transition: text-decoration 0.3s ease;
+    font-size: 20px;
+}
+
+.page:hover {
+    text-decoration: underline;
+}
+
+.search {
+margin-left: auto;
+}
+
+.ser {
+    border-radius: 30px;
+    height: 29px;
+    border: 1px solid darkgreen;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.menu-icon {
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Shoe Items */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+.heading{
+    text-align: center;
+}
+
+.shoes {
+    width: 330px;
+    border: 3px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+   
+
+}
+
+.img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.title {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.desc {
+    padding: 10px;
+    text-align: justify;
+}
+
+.btn {
+    margin: 17px 0;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #4db8ff;
+    color: white;
+    border: 2px solid #004d80;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: blue;
+}
+ /* Mobile */
+@media (max-width: 600px) {
+    .menus {
+        display: none;
+        flex-direction: column;
+        background-color: chartreuse;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        width: 80%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+        height: 10px;
+        margin-left: auto;
+        margin-bottom: 15px;
+    }
+
+    .ser {
+        display: none;
+    }
+
+    .shoes {
+        width: 350px;
+        margin: 10px auto;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
         /* Tablet */
-        @media (min-width:769px) and (max-width:992px) {
-            .heading{
-           font-size: 24px;  
+@media (min-width: 601px) and (max-width: 992px) {
+    .menus {
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .shoes {
+        width: 300px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+    .menus{
+        display: none;
+    }
+   
+}
+       
+       
+            /* Laptop */
+       
+        @media (min-width:993px) and (max-width:1200px) {
+            .heading {
+                font-size: 24px;
             }
-           .btn {
-               font-size: 24px;
+
+            .btn {
+                font-size: 24px;
             }
-            .shoes {
-                margin: 20px auto;
-                height: 410px;
-                width: 300px;
-            }
-            .menus{
-        margin-left: 400px;
-       }
-            .ser{
-                display: none;
-            }
-          
-        }
-         /* Laptop */
-         @media (min-width:993px) and (max-width:1200px) {
-            .heading{
-           font-size: 24px;  
-            }
-           .btn {
-               font-size: 24px;
-            }
+
             .shoes {
                 margin: 27px auto;
                 height: 430px;
             }
-    
-        }
 
+            .menus {
+                margin-left: 400px;
+            }
+            .options{
+                display: none;
+            }
+        
+        }
     </style>
 </head>
-<body>
-    <div class="navbar"> 
-        <div class="shop">
-            <img src="./img/seller.png" class="logo"></h2>adidas shop</div>
-       <div class="menus">
-        <a href="#" class="page">home</a>
-        <a href="#" class="page">about</a>
-        <a href="#" class="page">contact</a>
-       </div>
-       <div class="search">
-        <input type="text" placeholder="search" class="ser">
-       </div>
-       <div>
-      <img src="./img/menu-bar.png" class="icon">
-       </div>
-    </div>
-    <h1 class="heading">Welcome to our shoes shpoe</h1>
-    <div class="container">
-        <div class="shoes"><img src="./img/shoes1.jpg" class="img"> 
-            <h1 class="heading">Sports shoes</h1>
-        <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-    <button class="btn">Buy Now</button></div>
-    <div class="shoes"><img src="./img/shoes2.jpg" class="img"> 
-        <h1 class="heading">Sports shoes</h1>
-    <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
-<div class="shoes"><img src="./img/shoes3.jpg" class="img"> 
-    <h1 class="heading">Sports shoes</h1>
-<p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
-<div class="shoes"><img src="./img/shoes4.jpg" class="img"> 
-    <h1 class="heading">Sports shoes</h1>
-<p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
-<div class="shoes"><img src="./img/shoes5.jpg" class="img"> 
-    <h1 class="heading">Sports shoes</h1>
-<p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
-<div class="shoes"><img src="./img/shoes6.jpg" class="img"> 
-    <h1 class="heading">Sports shoes</h1>
-<p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
-<div class="shoes"><img src="./img/shoes7.jpg" class="img"> 
-    <h1 class="heading">Sports shoes</h1>
-<p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
-<div class="shoes"><img src="./img/shoes8.jpg" class="img"> 
-    <h1 class="heading">Sports shoes</h1>
-<p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
-<div class="shoes"><img src="./img/shoes9.jpg" class="img"> 
-    <h1 class="heading">Sports shoes</h1>
-<p class="desc">Ready for a jog? When your feet pound the pavement, you'll want  a shoe with plenty of cushioning to absorb the shock.</p>
-<button class="btn">Buy Now</button></div>
 
+<body>
+    <header class="navbar">
+        <div class="shop">
+            <img src="./img/seller.png" alt="Logo" class="logo">
+            <h2>Adidas Shop</h2>
+        </div>
+        <nav class="menus">
+            <a href="#" class="page">Home</a>
+            <a href="#" class="page">About</a>
+            <a href="#" class="page">Contact</a>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search" class="ser">
+        </div>
+        <div class="hamburger-menu">
+            <img src="./img/menu-bar.png" alt="Menu" class="menu-icon">
+        </div>
+    </header>
+        <main>
+            <h1 class="heading">Welcome to Our Shoe Shop</h1>
+            <div class="container">
+                <div class="shoes">
+                    <img src="./img/shoes1.jpg" alt="Sports Shoes" class="img">
+                    <h1 class="heading">Sports Shoes</h1>
+                    <p class="desc">
+                        Ready for a jog? When your feet pound the pavement, you'll want 
+                        a shoe with plenty of cushioning to absorb the shock.
+                    </p>
+                    <button class="btn">Buy Now</button>
+                </div>
+    
+        <div class="shoes"><img src="./img/shoes2.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="shoes"><img src="./img/shoes3.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="shoes"><img src="./img/shoes4.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="shoes"><img src="./img/shoes5.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="shoes"><img src="./img/shoes6.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="shoes"><img src="./img/shoes7.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="shoes"><img src="./img/shoes8.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="shoes"><img src="./img/shoes9.jpg" class="img">
+            <h1 class="heading">Sports shoes</h1>
+            <p class="desc">Ready for a jog? When your feet pound the pavement, you'll want a shoe with plenty of
+                cushioning to absorb the shock.</p>
+            <button class="btn">Buy Now</button>
+        </div>
     </div>
+</main>
 </body>
+
 </html>
